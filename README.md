@@ -7,6 +7,7 @@
 ## 의존성
 
 - TypeScript, React(react, react-dom), react-router-dom, axios를 필수적으로 사용합니다.
+- CSS 라이브러리 사용은 선택입니다. (Pure CSS, SASS, Tailwind CSS, CSS-in-JS 등)
 - 상태 관리 라이브러리 사용은 선택입니다. (redux, mobx, recoil 등)
 - 프로젝트 세팅에 CRA(Create React App)를 사용하지 않습니다.
 - 패키지 매니저(npm, yarn, pnpm 등) 사용은 자유입니다.
@@ -14,7 +15,8 @@
 
 ## 요구 사항
 
-> **아래 요구 사항에 따라 구현하되, 명시되어 있지 않은 요구 사항에 대해서는 자유롭게 구현해도 됩니다.**
+> - 아래 요구 사항에 따라 구현하되, 명시되어 있지 않은 요구 사항에 대해서는 자유롭게 구현해도 됩니다.
+> - UI 구현은 참고 자료에 있는 Figma를 참고하며 진행하지만, 동일하게 구현하지는 않아도 됩니다.
 
 ### 1. 회원가입 페이지 (/sign-up)
 
