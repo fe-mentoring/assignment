@@ -15,6 +15,7 @@
 
 ## 시작하기 전에
 - 구현을 위해 API가 필요합니다. [api-server](https://github.com/frontend-bbusigi/api-server) 레포지토리를 클론 받아 실행해주세요.
+- 실행 후 `http://localhost:3000/api` 로 접속하면 API 목록을 확인할 수 있습니다.
   
 ```shell
 # For start api-server
