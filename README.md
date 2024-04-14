@@ -13,6 +13,14 @@
 - 패키지 매니저(npm, yarn, pnpm 등) 사용은 자유입니다.
 - 위에 명시한 라이브러리 이외에는 사용이 제한됩니다.
 
+## 시작하기 전에
+- 구현을 위해 API가 필요합니다. [api-server](https://github.com/frontend-bbusigi/api-server) 레포지토리를 클론 받아 실행해주세요.
+  
+```shell
+# For start api-server
+$ pnpm start:dev
+```
+
 ## 요구 사항
 
 > - 아래 요구 사항에 따라 구현하되, 명시되어 있지 않은 요구 사항에 대해서는 자유롭게 구현해도 됩니다.
