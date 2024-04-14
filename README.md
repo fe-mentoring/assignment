@@ -9,7 +9,7 @@
 - TypeScript, React(react, react-dom), react-router-dom, axios를 필수적으로 사용합니다.
 - CSS 라이브러리 사용은 선택입니다. (Pure CSS, SASS, Tailwind CSS, CSS-in-JS 등)
 - 상태 관리 라이브러리 사용은 선택입니다. (redux, mobx, recoil 등)
-- 프로젝트 세팅에 CRA(Create React App)를 사용하지 않습니다.
+- 프로젝트 세팅에 CRA(Create React App)를 사용하지 않습니다. (vite 사용 권장)
 - 패키지 매니저(npm, yarn, pnpm 등) 사용은 자유입니다.
 - 위에 명시한 라이브러리 이외에는 사용이 제한됩니다.
 
