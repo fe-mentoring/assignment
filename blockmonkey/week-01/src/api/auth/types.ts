@@ -10,11 +10,11 @@ export interface SignUpResponse {
     }
 }
 
-export interface LoginParameter {
+export interface SignInParameter {
     email: string;
     password: string;
 }
 
-export interface LoginResponse {
+export interface SignInResponse {
     accessToken: string;
 }

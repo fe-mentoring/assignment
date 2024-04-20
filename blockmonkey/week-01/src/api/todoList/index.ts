@@ -4,26 +4,42 @@ import { CreateTodoListParamter, CreateTodoListResponse, TodoList, UpdateTodoLis
 const API_ENDPOINT = "todo";
 
 
-export const createTodoList = async(createTodoList : CreateTodoListParamter) : Promise<CreateTodoListResponse> => {
-    return (await apiInst.post(`${API_ENDPOINT}`, createTodoList)).data;
+export const createTodoListApi = async(createTodoList : CreateTodoListParamter, acToken : string) : Promise<CreateTodoListResponse> => {
+    const res = await apiInst.post(`${API_ENDPOINT}`, createTodoList, {
+        headers: {
+            Authorization: `Bearer ${acToken}`
+        }
+    })
+    return res.data;
 }
 
-export const getTodoLists = async () : Promise<TodoList[]> => {
-    return (await apiInst.get(`${API_ENDPOINT}`)).data;
+export const getTodoListsApi = async (acToken : string) : Promise<TodoList[]> => {
+    const res = await apiInst.get(`${API_ENDPOINT}`, {
+        headers: {
+            Authorization : `Bearer ${acToken}`
+        }
+    });
+    return res.data;
 } 
 
-export const updateTodoList = async (updateTodoListParameter : UpdateTodoListParameter) : Promise<UpdateTodoListResponse> => {
+export const updateTodoListApi = async (updateTodoListParameter: UpdateTodoListParameter, acToken: string) : Promise<UpdateTodoListResponse> => {
     const body = {
         title: updateTodoListParameter.title,
         completed: updateTodoListParameter.completed
     }
-    return (await apiInst.patch(`${API_ENDPOINT}/${updateTodoListParameter.id}`, body)).data;
+    const res = await apiInst.patch(`${API_ENDPOINT}/${updateTodoListParameter.id}`, body, {
+        headers: {
+            Authorization : `Bearer ${acToken}`
+        }
+    });
+    return res.data;
 }
 
-// export const getTodoLists = async() => {
-//     return (await apiInst.get(`${API_ENDPOINT}`)).data;
-// }
-
-export const removeTodoList = async (id : number) => {
-    return (await apiInst.delete(`${API_ENDPOINT}/${id}`)).data;
+export const removeTodoListApi = async (id: number, acToken: string) => {
+    const res = await apiInst.delete(`${API_ENDPOINT}/${id}`, {
+        headers: {
+            Authorization : `Bearer ${acToken}`
+        }
+    });
+    return res.data;
 }

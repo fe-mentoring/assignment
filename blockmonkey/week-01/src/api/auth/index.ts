@@ -1,5 +1,5 @@
 import apiInst from "..";
-import { LoginParameter, LoginResponse, SignUpParameter, SignUpResponse } from "./types";
+import { SignInParameter, SignInResponse, SignUpParameter, SignUpResponse } from "./types";
 
 const API_ENDPOINT = "auth";
 
@@ -7,11 +7,16 @@ export const signUpApi = async(signUpParameter : SignUpParameter) : Promise<Sign
     return (await apiInst.post(`${API_ENDPOINT}/signup`, signUpParameter)).data;
 }
 
-export const loginApi = async(loginParamter: LoginParameter) : Promise<LoginResponse> => {
+export const signInApi = async(loginParamter: SignInParameter) : Promise<SignInResponse> => {
     return (await apiInst.post(`${API_ENDPOINT}/login`, loginParamter)).data;
 }
 
-// // Token Required;
-// export const getProfile = async () => {
-//    return await apiInst.get(`${API_ENDPOINT}/profile`);
-// }
+// Token Required;
+export const getProfileApi = async (acToken: string) => {
+    const res = await apiInst.get(`${API_ENDPOINT}/profile`, {
+        headers: {
+            Authorization: `Bearer ${acToken}`,
+        }
+    });
+    return res.data;
+}

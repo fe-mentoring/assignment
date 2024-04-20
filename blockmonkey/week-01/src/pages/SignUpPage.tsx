@@ -1,9 +1,9 @@
-import SignInComponent from "../components/SignUp";
+import SignUpComponent from "../components/SignUp";
 
 const SignUpPage = () => {
   return (
     <>
-      <SignInComponent />
+      <SignUpComponent />
     </>
   )
 }
