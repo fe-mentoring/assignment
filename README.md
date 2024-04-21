@@ -9,4 +9,6 @@
 4. 최종 결과를 함께 리뷰하면서 과제를 마무리합니다.
 
 ## 주차별 과제
-- [Week 01 - 레벨 테스트](https://github.com/fe-mentoring/assignment/tree/main/week-01)
+- [Week 01 - 레벨 테스트](https://github.com/grow-mate/fe-mentoring-assignment/tree/main/week-01)
+
+
